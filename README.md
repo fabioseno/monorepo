@@ -7,6 +7,7 @@ The purpose of this repo is to demonstrate and exercise the scenario of a monore
 
 - does it make sense to group applications (REST API, lambdas) by project (sanctions, IDM, etc)
 - does it make sense to have multiple lambdas mapped to different operations on a CRUD API or it's better to keep the operations inside a single lambda function?
+- 
 
 
 ## Considerations
@@ -106,19 +107,13 @@ The ```student-profile-api``` project was structured following <cite>Uncle Bob</
 │   │   │   │   └── src (Javascript converted files from Typescript files)
 │   │   │   ├── src
 │   │   │   │   ├── application
-│   │   │   │   │   ├── adapter
-│   │   │   │   │   │   └── ExpressAdapter.ts
+│   │   │   │   │   ├── adapter (application-wide adapters)
 │   │   │   │   │   └── controller
-│   │   │   │   │       └── StudentProfileController.ts
 │   │   │   │   ├── domain (core business rules - technology agnostic)
 │   │   │   │   │   ├── adapter (DTO's)
 │   │   │   │   │   ├── entity (models with basic validations)
 │   │   │   │   │   ├── repository (data access interface)
-│   │   │   │   │   └── usecase
-│   │   │   │   │       ├── CreateStudentProfile.test.ts
-│   │   │   │   │       ├── CreateStudentProfile.ts
-│   │   │   │   │       ├── GetStudentProfile.test.ts
-│   │   │   │   │       └── GetStudentProfile.ts
+│   │   │   │   │   └── usecase (actual application user stories)
 │   │   │   │   └── infrastructure (concrete implementations tied to specific technology)
 │   │   │   │       ├── http
 │   │   │   │       │   └── express.ts (Express application entry point)

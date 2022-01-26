@@ -4,8 +4,8 @@ const path = require("path")
 const config = {
     //what are the entry points to our functions
     entry: {
-        express: "./dist/src/infrastructure/http/express.js",
-        lambda: "./dist/src/infrastructure/serverless/lambda.js"
+        express: "./dist/src/infrastructure/http/express.app.js",
+        lambda: "./dist/src/infrastructure/serverless/lambda.function.js"
     },
     //how we want the output
     output: {

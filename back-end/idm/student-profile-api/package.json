@@ -2,12 +2,13 @@
   "name": "create-profile",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/infrastructure/http/express.js",
+  "main": "./dist/infrastructure/http/express.app.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc && ./node_modules/.bin/webpack --stats-error-details",
     "test": "tsc && jest ./dist/src --coverage",
-    "express": "tsc && node ./dist/src/infrastructure/http/express.js",
-    "bundle": "tsc && ./node_modules/.bin/webpack --stats-error-details"
-  },
+    "express": "tsc && node ./dist/src/infrastructure/http/express.app.js"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
+    "rimraf": "^3.0.2",
     "uuid": "^8.3.2"
   }
 }

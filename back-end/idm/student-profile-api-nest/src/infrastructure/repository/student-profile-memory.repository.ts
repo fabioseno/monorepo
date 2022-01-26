@@ -1,6 +1,7 @@
-import StudentProfileAdapter from "../../domain/adapter/StudentProfileAdapter";
-import { StudentProfile } from "../../domain/entity/StudentProfile";
-import StudentProfileRepository from "../../domain/repository/StudentProfileRepository";
+import { StudentProfile } from "../../domain/entity/student-profile";
+import StudentProfileRepository from "../../domain/repository/student-profile.repository";
+import StudentProfileAdapter from "../../domain/adapter/student-profile.adapter";
+import { Injectable } from '@nestjs/common';
 
 type StudentProfileData = {
     master_profile_id: string,
@@ -12,6 +13,7 @@ type StudentProfileData = {
     email: string;
 }
 
+@Injectable()
 export default class StudentProfileMemoryRepository implements StudentProfileRepository {
 
     private static profiles: StudentProfileData[] = [];

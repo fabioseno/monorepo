@@ -1,5 +1,5 @@
-import StudentProfileRepository from "../repository/StudentProfileRepository";
-import StudentProfileAdapter from "../adapter/StudentProfileAdapter";
+import StudentProfileRepository from "../repository/student-profile.repository";
+import StudentProfileAdapter from "../adapter/student-profile.adapter";
 import { v4 as uuidv4 } from 'uuid';
 
 export default class CreateStudentProfile {

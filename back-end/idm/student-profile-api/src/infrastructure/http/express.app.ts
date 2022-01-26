@@ -1,5 +1,5 @@
-import ExpressAdapter from '../../application/adapter/ExpressAdapter';
-import StudentProfileController from '../../application/controllers/StudentProfileController';
+import ExpressAdapter from '../../application/adapter/express.adapter';
+import StudentProfileController from '../../application/controllers/student-profile.controller';
 const bodyParser = require('body-parser')
 const express = require('express');
 const app = express();

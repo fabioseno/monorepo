@@ -1,4 +1,4 @@
-import StudentProfileRepository from "../repository/StudentProfileRepository";
+import StudentProfileRepository from "../repository/student-profile.repository";
 
 export default class GetStudentProfile {
     constructor(private studentProfileRepository: StudentProfileRepository) { }

@@ -1,13 +1,20 @@
 # monorepo
 
-The purpose of this repo is to demonstrate and exercise the scenario of a monorepo containing several applications for different business projects and grouped by frontend and backend stacks.
+This repo has three distinct purposes:
+
+1) demonstrate and exercise the scenario of a monorepo containing several applications for different business projects and grouped by frontend and backend stacks and
+2) to exercise a backend project structure (Profile API) using <cite>Uncle Bob</cite>'s [**The Clean Architecture**](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) and
+3) to exercise this same project using NestJS and maintaning some DDD principles and layer decoupling 
+
+As of the monorepo structure (item 1), I don't have much to comment as there is no much content to validate the structure. Nevertheless a PoC using [Nx](https://nx.dev/) is welcome to validate if we can have an efficient process when it comes to building and packaging inner applications in monorepos.
+
+As for the project, the intention is to present a lambda project with decoupled layers using Inversion of Control project ```student-profile-api``` (vanillja JS)  or Dependency Injection in project ```student-profile-api-nest``` (NestJS).
 
 
 ## Questions
 
-- does it make sense to group applications (REST API, lambdas) by project (sanctions, IDM, etc)
+- does it make sense to group applications (REST API, lambdas) by project (sanctions, IDM, etc)?
 - does it make sense to have multiple lambdas mapped to different operations on a CRUD API or it's better to keep the operations inside a single lambda function?
-- 
 
 
 ## Considerations
@@ -15,7 +22,6 @@ The purpose of this repo is to demonstrate and exercise the scenario of a monore
 ### Pros
 - all the code base is kept together in one place and "easy" to find
 - it may be more productive for full stack developers that need to change both Frontend and Backend
-- 
 
 ### Cons
 
@@ -28,7 +34,7 @@ The purpose of this repo is to demonstrate and exercise the scenario of a monore
 
 ### Repository structure
 
-The ```student-profile-api``` project was structured following <cite>Uncle Bob</cite> [**The Clean Architecture**](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) design principles.
+The ```student-profile-api``` project was structured following   design principles.
 
 ```
 .

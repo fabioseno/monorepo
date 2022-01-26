@@ -1,4 +1,4 @@
-import { ProfileType, StudentProfile } from "../entity/StudentProfile";
+import { ProfileType, StudentProfile } from "../entity/student-profile";
 
 export default class StudentProfileAdapter {
 

@@ -1,6 +1,6 @@
-import CreateStudentProfile from "../../domain/usecase/CreateStudentProfile";
-import GetStudentProfile from "../../domain/usecase/GetStudentProfile";
-import StudentProfileMemoryRepository from "../../infrastructure/repository/StudentProfileMemoryRepository";
+import CreateStudentProfile from "../../domain/usecase/create-student-profile";
+import GetStudentProfile from "../../domain/usecase/get-student-profile";
+import StudentProfileMemoryRepository from "../../infrastructure/repository/student-profile-memory.repository";
 
 export default class StudentProfileController {
 
@@ -8,9 +8,7 @@ export default class StudentProfileController {
         const studentProfileMemoryRepository = new StudentProfileMemoryRepository();
         const getStudentProfile = new GetStudentProfile(studentProfileMemoryRepository);
 
-        let profile = await getStudentProfile.execute(email);
-
-        return profile;
+        return getStudentProfile.execute(email);
     }
 
     static async createStudentProfile(data) {

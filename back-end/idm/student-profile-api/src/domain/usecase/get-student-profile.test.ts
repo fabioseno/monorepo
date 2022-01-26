@@ -1,6 +1,6 @@
-import StudentProfileMemoryRepository from "../../infrastructure/repository/StudentProfileMemoryRepository";
-import CreateStudentProfile from "./CreateStudentProfile";
-import GetStudentProfile from "./GetStudentProfile";
+import StudentProfileMemoryRepository from "../../infrastructure/repository/student-profile-memory.repository";
+import CreateStudentProfile from "./create-student-profile";
+import GetStudentProfile from "./get-student-profile";
 
 test('Should throw an error if no profile is found', async function () {
     const studentProfileMemoryRepository = new StudentProfileMemoryRepository();

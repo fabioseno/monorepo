@@ -1,4 +1,4 @@
-import StudentProfileController from '../../application/controllers/StudentProfileController';
+import StudentProfileController from '../../application/controllers/student-profile.controller';
 
 exports.handler = async function (event, context) {
     let statusCode = 200;

@@ -1,4 +1,4 @@
-import { StudentProfile } from '../entity/StudentProfile';
+import { StudentProfile } from '../entity/student-profile';
 
 export default interface StudentProfileRepository {
 
